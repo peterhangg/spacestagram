@@ -30,16 +30,17 @@
       }
     ],
     "no-shadow": "off",
+    "camelcase": 0,
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
-        "allowExpressions": true
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
       }
     ],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "max-len": ["warn", { "code": 80 }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "off"
