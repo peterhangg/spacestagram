@@ -5,10 +5,6 @@ import {
   GET_NASA_IMAGE_SUCCESS,
 } from '../constants';
 
-export interface IgetNasaImageResult extends Action {
-  type: 'GET_NASA_IMAGE_RESULT'
-}
-
 export interface IGetNasaImageSuccess extends Action {
   type: 'GET_NASA_IMAGE_SUCCESS'
   payload: IAPOD[]
@@ -19,7 +15,6 @@ export interface IGetNasaImageError extends Action {
 }
 
 export type fetchNasaAction =
-  | IgetNasaImageResult
   | IGetNasaImageSuccess
   | IGetNasaImageError
 

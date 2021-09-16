@@ -9,6 +9,7 @@ import {
 
 export const fetchNasaImages = () => async (dispatch: Dispatch<fetchNasaAction>): Promise<void> => {
   try {
+    console.log('FETCHING API');
     const data: IAPOD[] = await getNasaImages();
     dispatch(getNasaImageResults(data));
   } catch (err) {
