@@ -3,24 +3,24 @@ import { shortenedSummary } from '../../utils/helper';
 import { ContentSummary, ExpandButton } from './styles';
 
 interface ExpandableTextProps {
-  ImageExplanation: string;
+  TextSummary: string;
 }
 
-const ExpandableText: React.FC<ExpandableTextProps> = ({ ImageExplanation }) => {
+const ExpandableText: React.FC<ExpandableTextProps> = ({ TextSummary }) => {
   const [collapse, setCollapse] = React.useState<boolean>(true);
   return (
     <>
-      {ImageExplanation.split(' ').length > 50 && collapse ? (
+      {TextSummary.split(' ').length > 50 && collapse ? (
         <p>
           <ContentSummary>
-            {shortenedSummary(ImageExplanation)}
+            {shortenedSummary(TextSummary)}
           </ContentSummary>
           <ExpandButton type="button" onClick={() => setCollapse(false)}>
             ...more
           </ExpandButton>
         </p>
       ) : (
-        <p>{ImageExplanation}</p>
+        <p>{TextSummary}</p>
       )}
     </>
   );
