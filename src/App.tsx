@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchNasaImages } from './store/thunk-creator';
 import { State } from './store/reducers';
 import './App.css';
+import Card from './components/Card';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -13,9 +14,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       {nasaImages.map((nasaImage) => (
-        <div key={nasaImage.title}>
-          <img src={nasaImage.url} alt={nasaImage.title} />
-        </div>
+        <Card key={nasaImage.title} nasaImage={nasaImage} />
       ))}
     </div>
   );
