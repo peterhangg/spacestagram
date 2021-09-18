@@ -17,16 +17,16 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ nasaImage }) => {
-  const [favourite, setFavourite] = React.useState<boolean>(false);
+  const [liked, setLiked] = React.useState<boolean>(false);
   return (
     <CardStyles>
       <CardHeader />
       <CardImage CardImageSrc={nasaImage.url} CardImageTitle={nasaImage.title} />
       <CardButtonContainer>
-        <CardButton type="button" onClick={() => setFavourite(!favourite)}>
-          <img src={favourite ? RedHeart : Heart} alt="heart icon" />
+        <CardButton type="button" aria-label="Like post" onClick={() => setLiked(!liked)}>
+          <img src={liked ? RedHeart : Heart} alt="heart icon" />
         </CardButton>
-        <CardButton type="button">
+        <CardButton aria-label="Share link" type="button">
           <img src={ShareIcon} alt="share icon" />
         </CardButton>
       </CardButtonContainer>
