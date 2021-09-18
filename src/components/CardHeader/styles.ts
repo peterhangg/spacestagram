@@ -9,6 +9,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  border-bottom: 1px solid #d3d3d3;
 `;
 
 export const ProfileIconContainer = styled.div`

@@ -5,8 +5,10 @@ import { primaryFont } from './typography';
 export const GlobalStyle = createGlobalStyle`
   ${normalize()}
   html {
-    font-size: 16px;
+    font-size: 1rem;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -18,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
   main {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 `;

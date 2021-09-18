@@ -1,15 +1,9 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { State } from '../../store/reducers';
 import { fetchNasaImages } from '../../store/thunk-creator';
 import Card from '../Card';
-
-const CardListStyles = styled.ul`
-  list-style: none;
-  padding: 10px;
-  height: 100%;
-`;
+import { CardListStyles } from './styles';
 
 const CardList: React.FC = () => {
   const dispatch = useDispatch();

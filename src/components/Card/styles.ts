@@ -7,10 +7,12 @@ export const CardStyles = styled.li`
   border-radius: 5px;
   box-shadow: 2px 2px 4px 0px #cfd8dc;
   margin-bottom: 15px;
+  background-color: #ffffff;
 `;
 
 export const CardButtonContainer = styled(HeaderContainer)`
   padding: 5px;
+  border: none;
 `;
 
 export const CardButton = styled.button`
