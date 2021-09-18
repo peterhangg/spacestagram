@@ -6,8 +6,6 @@ import {
   CardImageStyles,
   CardStyles,
   ContentContainer,
-  ContentSummary,
-  ExpandButton,
   HeaderContainer,
   HeaderUser,
   ImageContainer,
@@ -20,6 +18,7 @@ import Dots from '../../assets/dots.svg';
 import Heart from '../../assets/heart.png';
 import RedHeart from '../../assets/red-heart.png';
 import ShareIcon from '../../assets/share.png';
+import ExpandableText from '../ExpandableText';
 
 interface CardProps {
   nasaImage: IAPOD
@@ -27,13 +26,6 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ nasaImage }) => {
   const [favourite, setFavourite] = React.useState<boolean>(false);
-  const [collapse, setCollapse] = React.useState<boolean>(true);
-  const shortenedSummary = (string: string): string => {
-    const textArr = string.split(' ');
-    return textArr.length > 50
-      ? `${textArr.slice(0, 50).join(' ')}`
-      : textArr.join(' ');
-  };
   return (
     <CardStyles>
       <HeaderContainer>
@@ -58,20 +50,7 @@ const Card: React.FC<CardProps> = ({ nasaImage }) => {
       </ButtonContainer>
       <ContentContainer>
         <PostTitle>{`${nasaImage.title} - ${nasaImage.date}`}</PostTitle>
-        {nasaImage.explanation.split(' ').length > 50 && collapse ? (
-          <>
-            <p>
-              <ContentSummary>
-                {shortenedSummary(nasaImage.explanation)}
-              </ContentSummary>
-              <ExpandButton type="button" onClick={() => setCollapse(false)}>
-                ...more
-              </ExpandButton>
-            </p>
-          </>
-        ) : (
-          <p>{nasaImage.explanation}</p>
-        )}
+        <ExpandableText ImageExplanation={nasaImage.explanation} />
       </ContentContainer>
     </CardStyles>
   );
