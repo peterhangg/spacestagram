@@ -1,4 +1,6 @@
-.App {
+import styled from 'styled-components';
+
+export const PageLayoutStyles = styled.div`
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -8,4 +10,4 @@
   align-items: center;
   background-color: #fafafa;
   overflow-y: scroll;
-}
+`;

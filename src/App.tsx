@@ -1,15 +1,13 @@
 import React from 'react';
-import './App.css';
-import { GlobalStyle } from './utils/Global';
-import CardList from './components/CardList';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 const App: React.FC = () => (
-  <div className="App">
-    <GlobalStyle />
-    <Navbar />
-    <CardList />
-  </div>
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+    </Switch>
+  </Router>
 );
 
 export default App;

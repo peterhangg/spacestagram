@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
 export const ProfileIconContainer = styled.div`
   width: 40px;
   height: 40px;
-  border: coral 1px solid;
+  border: #D3D3D3 1px solid;
   border-radius: 50%;
   margin-right: 6px;
 `;
