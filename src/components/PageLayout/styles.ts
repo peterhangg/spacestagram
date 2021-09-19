@@ -9,4 +9,5 @@ export const PageLayoutStyles = styled.div`
   background-color: #fafafa;
   position: relative;
   padding-bottom: 15px;
+  overflow-x: hidden;
 `;

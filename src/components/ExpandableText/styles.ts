@@ -4,7 +4,7 @@ export const ExpandButton = styled.button`
   border: none;
   background-color: #ffffff ;
   display: inline-block;
-  color: gray;
+  color: #3d3d3d;
   font-size: 1rem;
 
   &:hover {
