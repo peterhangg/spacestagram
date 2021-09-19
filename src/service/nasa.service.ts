@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { IAPOD } from '../type';
+import { IAPOD } from '../types';
 
 const getNasaImages = async (): Promise<IAPOD[]> => {
   const response = await axios.get(process.env.REACT_APP_API_URL as string);

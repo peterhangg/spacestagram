@@ -4,8 +4,8 @@ import { NavLink, NavStyles } from './styles';
 
 const Navbar: React.FC = () => (
   <NavStyles>
-    <NavLink href="/" aria-label="App logo">Spacestagram</NavLink>
-    <NavLink href="/liked" aria-label="Heart icon">
+    <NavLink to="/" aria-label="App logo">Spacestagram</NavLink>
+    <NavLink to="/liked" aria-label="Heart icon">
       <img src={RedHeart} alt="Red heart" />
     </NavLink>
   </NavStyles>

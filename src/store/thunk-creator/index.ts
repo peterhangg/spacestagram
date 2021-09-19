@@ -1,8 +1,7 @@
 import { Dispatch } from 'redux';
 import getNasaImages from '../../service/nasa.service';
-import { IAPOD } from '../../type';
+import { fetchNasaAction, IAPOD } from '../../types';
 import {
-  fetchNasaAction,
   getNasaImageError,
   getNasaImageResults,
 } from '../action-creator';

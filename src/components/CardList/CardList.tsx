@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { IAPOD } from '../../type';
+import { IAPOD } from '../../types';
 import Card from '../Card';
 import { CardListStyles } from './styles';
 
 interface CardListProps {
-  NasaImageData: IAPOD[];
+  nasaImageData: IAPOD[];
 }
 
-const CardList: React.FC<CardListProps> = ({ NasaImageData }) => (
+const CardList: React.FC<CardListProps> = ({ nasaImageData }) => (
   <CardListStyles>
-    {NasaImageData.map((nasaImage) => (
+    {nasaImageData && nasaImageData.map((nasaImage) => (
       <Card key={nasaImage.title} nasaImage={nasaImage} />
     ))}
   </CardListStyles>
