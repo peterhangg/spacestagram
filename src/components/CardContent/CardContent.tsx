@@ -3,15 +3,15 @@ import ExpandableText from '../ExpandableText';
 import { ContentContainer, PostTitle } from './styles';
 
 interface CardContentProps {
-  CardTitle: string;
-  CardDate: string;
-  CardSummary: string
+  cardTitle: string;
+  cardDate: string;
+  cardSummary: string
 }
 
-const CardContent: React.FC<CardContentProps> = ({ CardTitle, CardDate, CardSummary }) => (
+const CardContent: React.FC<CardContentProps> = ({ cardTitle, cardDate, cardSummary }) => (
   <ContentContainer>
-    <PostTitle>{`${CardTitle} - ${CardDate}`}</PostTitle>
-    <ExpandableText TextSummary={CardSummary} />
+    <PostTitle>{`${cardTitle} - ${cardDate}`}</PostTitle>
+    <ExpandableText TextSummary={cardSummary} />
   </ContentContainer>
 );
 

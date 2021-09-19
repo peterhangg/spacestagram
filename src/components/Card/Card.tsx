@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ nasaImage }) => {
   return (
     <CardStyles>
       <CardHeader />
-      <CardImage CardImageSrc={nasaImage.url} CardImageTitle={nasaImage.title} />
+      <CardImage cardImageSrc={nasaImage.url} cardImageTitle={nasaImage.title} liked={liked} />
       <CardButtonContainer>
         <CardButton type="button" aria-label="Like post" onClick={handleLiked}>
           <img src={liked ? RedHeart : Heart} alt="heart icon" />
@@ -44,9 +44,9 @@ const Card: React.FC<CardProps> = ({ nasaImage }) => {
         </CardButton>
       </CardButtonContainer>
       <CardContent
-        CardTitle={nasaImage.title}
-        CardDate={nasaImage.date}
-        CardSummary={nasaImage.explanation}
+        cardTitle={nasaImage.title}
+        cardDate={nasaImage.date}
+        cardSummary={nasaImage.explanation}
       />
     </CardStyles>
   );

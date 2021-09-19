@@ -1,5 +1,5 @@
 export * from './actionTypes';
-
+export * from './stylesTypes';
 export interface IAPOD {
   copyright?: string | null
   date: string

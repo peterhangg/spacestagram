@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { IAPOD } from '../types';
 
-const getNasaImages = async (): Promise<IAPOD[]> => {
+const fetchNasaImages = async (): Promise<IAPOD[]> => {
   const response = await axios.get(process.env.REACT_APP_API_URL as string);
 
   if (response.status !== 200) {
@@ -11,4 +11,4 @@ const getNasaImages = async (): Promise<IAPOD[]> => {
   return data;
 };
 
-export default getNasaImages;
+export default fetchNasaImages;
