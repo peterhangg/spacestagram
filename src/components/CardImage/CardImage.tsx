@@ -1,14 +1,17 @@
 import * as React from 'react';
+import LikeAnimate from '../LikeAnimate';
 import { ImageContainer, CardImageStyles } from './styles';
 
 interface CardImageProps {
-  CardImageSrc: string;
-  CardImageTitle: string;
+  cardImageSrc: string;
+  cardImageTitle: string;
+  liked: boolean;
 }
 
-const CardImage: React.FC<CardImageProps> = ({ CardImageSrc, CardImageTitle }) => (
+const CardImage: React.FC<CardImageProps> = ({ cardImageSrc, cardImageTitle, liked }) => (
   <ImageContainer>
-    <CardImageStyles src={CardImageSrc} alt={CardImageTitle} />
+    <CardImageStyles src={cardImageSrc} alt={cardImageTitle} />
+    <LikeAnimate liked={liked} />
   </ImageContainer>
 );
 
