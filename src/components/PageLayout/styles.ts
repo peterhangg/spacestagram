@@ -7,4 +7,5 @@ export const PageLayoutStyles = styled.div`
   width: calc(var(--vw, 1vw) * 100);
   overflow-y: hidden;
   background-color: #fafafa;
+  position: relative;
 `;
