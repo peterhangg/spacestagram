@@ -1,3 +1,5 @@
+export * from './actionTypes';
+
 export interface IAPOD {
   copyright?: string | null
   date: string
@@ -7,10 +9,4 @@ export interface IAPOD {
   service_version: string
   title: string
   url: string
-}
-
-export interface INasaImageState {
-  nasaImages: IAPOD[]
-  loading: boolean
-  error: boolean
 }

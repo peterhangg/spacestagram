@@ -1,5 +1,4 @@
-import { INasaImageState } from '../../type';
-import { fetchNasaAction } from '../action-creator';
+import { fetchNasaAction, INasaImageState } from '../../types';
 import {
   GET_NASA_IMAGE_SUCCESS,
   GET_NASA_IMAGE_ERROR,

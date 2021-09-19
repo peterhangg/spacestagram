@@ -11,9 +11,17 @@ const Home: React.FC = () => {
     dispatch(fetchNasaImages());
   }, [dispatch]);
   const nasaImages = useSelector((state: State) => state.apiData.nasaImages);
+  const loading = useSelector((state: State) => state.apiData.loading);
+  if (loading) {
+    return (
+      <PageLayout>
+        <p>loading...</p>
+      </PageLayout>
+    );
+  }
   return (
     <PageLayout>
-      <CardList NasaImageData={nasaImages} />
+      <CardList nasaImageData={nasaImages} />
     </PageLayout>
   );
 };

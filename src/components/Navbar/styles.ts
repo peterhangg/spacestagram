@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { logoFont } from '../../utils/typography';
 
 export const NavStyles = styled.nav`
@@ -18,7 +19,7 @@ export const NavStyles = styled.nav`
   font-family: ${logoFont};
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   font-size: 1.5rem;
   text-decoration: none;
   color: #000000;
