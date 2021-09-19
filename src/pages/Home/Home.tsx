@@ -10,8 +10,8 @@ const Home: React.FC = () => {
   React.useEffect(() => {
     dispatch(fetchNasaImages());
   }, [dispatch]);
-  const nasaImages = useSelector((state: State) => state.apiData.nasaImages);
-  const loading = useSelector((state: State) => state.apiData.loading);
+  const nasaImages = useSelector((state: State) => state.apiData?.nasaImages);
+  const loading = useSelector((state: State) => state.apiData?.loading);
   if (loading) {
     return (
       <PageLayout>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
   }
   return (
     <PageLayout>
-      <CardList nasaImageData={nasaImages} />
+      <CardList nasaImageData={nasaImages} fromAPI />
     </PageLayout>
   );
 };
