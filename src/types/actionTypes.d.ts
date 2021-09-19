@@ -19,7 +19,9 @@ export interface IGetNasaImageSuccess extends Action {
 export interface IGetNasaImageError extends Action {
   type: 'GET_NASA_IMAGE_ERROR'
 }
-
+export interface IInitGetNasaImage extends Action {
+  type: 'GET_NASA_IMAGE_PENDING'
+}
 export interface IAddToLiked extends Action {
   type: 'ADD_IMAGE_TO_LIKED'
   payload: IAPOD
@@ -29,6 +31,6 @@ export interface IRemoveFromLiked extends Action {
   payload: IAPOD
 }
 
-export type fetchNasaAction = IGetNasaImageSuccess| IGetNasaImageError;
+export type fetchNasaAction = IInitGetNasaImage | IGetNasaImageSuccess| IGetNasaImageError;
 
 export type LikeImageAction = IAddToLiked | IRemoveFromLiked;

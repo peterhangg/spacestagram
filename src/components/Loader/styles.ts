@@ -16,9 +16,10 @@ export const BounceAnimation = keyframes`
   100% { margin-bottom: 0 }
 `;
 
-export const DotWrapper = styled.div`
+export const DotContainer = styled.div`
   display: flex;
   align-items: flex-end;
+  z-index: 1000;
 `;
 
 export const Dot = styled.div<DotProps>`

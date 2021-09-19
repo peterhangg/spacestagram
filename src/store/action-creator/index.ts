@@ -1,13 +1,15 @@
 import {
   IAddToLiked,
   IAPOD,
+  IInitGetNasaImage,
   IGetNasaImageError,
   IGetNasaImageSuccess,
   IRemoveFromLiked,
 } from '../../types';
 import {
-  GET_NASA_IMAGE_ERROR,
+  GET_NASA_IMAGE_PENDING,
   GET_NASA_IMAGE_SUCCESS,
+  GET_NASA_IMAGE_ERROR,
   ADD_IMAGE_TO_LIKED,
   REMOVE_IMAGE_FROM_LIKED,
 } from '../constants';
@@ -17,6 +19,10 @@ export const getNasaImageResults = (
 ): IGetNasaImageSuccess => ({
   type: GET_NASA_IMAGE_SUCCESS,
   payload,
+});
+
+export const initGetNasaImage = (): IInitGetNasaImage => ({
+  type: GET_NASA_IMAGE_PENDING,
 });
 
 export const getNasaImageError = (): IGetNasaImageError => ({
