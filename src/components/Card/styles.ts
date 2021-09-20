@@ -18,6 +18,8 @@ export const CardStyles = styled.li`
   margin-bottom: 20px;
   background-color: #ffffff;
   animation: 0.75s ${FadeIn} ease-in;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const CardButtonContainer = styled(HeaderContainer)`

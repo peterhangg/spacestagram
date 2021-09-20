@@ -5,3 +5,7 @@ export type FadeProps = {
 export type DotProps = {
   delay: string;
 }
+
+export type ToastStylesProps = {
+  showToast: string;
+};

@@ -1,5 +1,5 @@
-export * from './actionTypes';
-export * from './stylesTypes';
+import { Dispatch, SetStateAction } from 'react';
+
 export interface IAPOD {
   copyright?: string | null
   date: string
@@ -10,3 +10,7 @@ export interface IAPOD {
   title: string
   url: string
 }
+
+export type Dispatcher<S> = Dispatch<SetStateAction<S>>;
+export * from './actionTypes';
+export * from './stylesTypes';

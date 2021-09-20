@@ -33,7 +33,7 @@ We'd like a simple to use interface that makes it easy to:
 - Heart animation on “liked” images
 - loading state while we wait for NASA’s API to return data
 - Fetch additional images from NASA API when scroll to bottom of page
-
+- Created shareable links for each image
 ## Installion & Setup
 * Copy `example.env` and create `.env.local` at the root of the folder and add required environment info. 
 
