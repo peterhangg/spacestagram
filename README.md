@@ -1,7 +1,11 @@
-# Spacestagram
+<h1 align="center">Spacestagram</h1>
 
-A React web app for the Front End Developer Challenge - Winter 2022. 
+A React web app for the Shopify Front End Developer Challenge - Winter 2022. 
 View [Demo](https://spacestagram-ph.netlify.app/)
+
+<p align="center">
+  <img src="doc/spacestagram-demo.gif" alt="animated" />
+</p>
 
 ## The Challenge
 We need a webpage that can pull images, and allow the user to “like” and “unlike” their favourite images.
