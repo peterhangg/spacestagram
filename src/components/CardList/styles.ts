@@ -9,8 +9,9 @@ export const CardListStyles = styled.ul`
 export const CardContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
-  overflow-y: scroll;
+  height: 95%;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
+  padding-bottom: 15px;
 `;
