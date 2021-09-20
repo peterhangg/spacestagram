@@ -15,7 +15,7 @@ export const CardStyles = styled.li`
   max-width: 400px;
   border-radius: 5px;
   box-shadow: 2px 2px 4px 0px #cfd8dc;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   background-color: #ffffff;
   animation: 0.75s ${FadeIn} ease-in;
 `;

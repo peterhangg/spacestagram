@@ -4,3 +4,5 @@ export const shortenedSummary = (string: string): string => {
     ? `${textArr.slice(0, 50).join(' ')}`
     : textArr.join(' ');
 };
+
+export const dateConverter = (date: string): string => new Date(date).toDateString();

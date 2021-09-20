@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Spacestagram
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React web app for the Front End Developer Challenge - Winter 2022. 
+View [Demo](https://spacestagram-ph.netlify.app/)
 
-## Available Scripts
+## The Challenge
+We need a webpage that can pull images, and allow the user to “like” and “unlike” their favourite images.
 
-In the project directory, you can run:
+We'd like a simple to use interface that makes it easy to:
+- Fetch data from one of NASA’s APIs and display the resulting images (more details under Technical Requirements)
+- Display descriptive data for each image (for example: title, date, description, etc.)
+- Like an image
+- Unlike an image
 
-### `yarn start`
+ ### Technical requirements
+1. Search results should come from NASA’s free APIs, for which you’ll need a free API key from [NASA API](https://api.nasa.gov)
+2. Each image result should list at least a title, date of capture (ideally in earth_date) and a button to “like” that image.
+3. Each image can be “liked”, and a user should be able to undo their “like”
+4. The HTML that ends up being served client-side should be accessible and semantic [MDN reference](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ ## Tech Stack
+* React
+* TypeScript
+* Styled Components
+* Redux
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Additional Features
+- Save likes if the user leaves or reloads the page
+- Heart animation on “liked” images
+- loading state while we wait for NASA’s API to return data
+- Fetch additional images from NASA API when scroll to bottom of page
 
-### `yarn test`
+## Installion & Setup
+* Copy `example.env` and create `.env.local` at the root of the folder and add required environment info. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the app, run this commands in from the root:
+```bash
+npm i && npm start
+```
