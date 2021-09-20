@@ -6,7 +6,7 @@ import {
   LinkStyles,
   Text,
   Image,
-} from './styled';
+} from './styles';
 
 const EmptyLikes: React.FC = () => (
   <EmptyLikesContainer>

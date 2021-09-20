@@ -11,16 +11,16 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({ TextSummary }) => {
   return (
     <>
       {TextSummary.split(' ').length > 50 && collapse ? (
-        <p>
-          <ContentSummary>
-            {shortenedSummary(TextSummary)}
-          </ContentSummary>
-          <ExpandButton type="button" onClick={() => setCollapse(false)}>
-            ...more
-          </ExpandButton>
-        </p>
+        <ContentSummary>
+          {shortenedSummary(TextSummary)}
+          <span>
+            <ExpandButton type="button" onClick={() => setCollapse(false)}>
+              ...more
+            </ExpandButton>
+          </span>
+        </ContentSummary>
       ) : (
-        <p>{TextSummary}</p>
+        <ContentSummary>{TextSummary}</ContentSummary>
       )}
     </>
   );

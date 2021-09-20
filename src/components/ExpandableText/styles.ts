@@ -12,6 +12,6 @@ export const ExpandButton = styled.button`
   }
 `;
 
-export const ContentSummary = styled.span`
+export const ContentSummary = styled.p`
   font-size: 1rem;
 `;

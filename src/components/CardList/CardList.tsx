@@ -13,15 +13,15 @@ interface CardListProps {
 const CardList: React.FC<CardListProps> = ({ nasaImageData, fromAPI }) => {
   const cardContainerRef = React.useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
-  const handleScroll = (e: React.UIEvent<HTMLElement>): void => {
+  const scrollHandler = React.useCallback((e: React.UIEvent<HTMLElement>): void => {
     const target = e.target as Element;
     const bottom = target.scrollHeight - target.scrollTop === target.clientHeight;
     if (bottom && fromAPI) {
       dispatch(fetchNasaImages());
     }
-  };
+  }, [dispatch, fromAPI]);
   return (
-    <CardContainer ref={cardContainerRef} onScroll={handleScroll}>
+    <CardContainer ref={cardContainerRef} onScroll={scrollHandler}>
       <CardListStyles>
         {nasaImageData.map((nasaImage) => (
           <Card key={nasaImage.title} nasaImage={nasaImage} />

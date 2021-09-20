@@ -5,7 +5,7 @@ padding: 10px;
 text-align: left;
 `;
 
-export const PostTitle = styled.p`
+export const PostTitle = styled.h4`
   font-weight: bolder;
   margin: 0 0 4px 0;
 `;

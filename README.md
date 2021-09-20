@@ -23,18 +23,18 @@ We'd like a simple to use interface that makes it easy to:
 4. The HTML that ends up being served client-side should be accessible and semantic [MDN reference](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)
 
  ## Tech Stack
-* React
-* TypeScript
-* Styled Components
-* Redux
+* [React](https://github.com/facebook/react)
+* [TypeScript](https://github.com/microsoft/TypeScript)
+* [Styled Components](https://github.com/styled-components/styled-components)
+* [Redux](https://github.com/reduxjs/redux)
 
 ## Additional Features
 - Save likes if the user leaves or reloads the page
 - Heart animation on “liked” images
 - loading state while we wait for NASA’s API to return data
 - Fetch additional images from NASA API when scroll to bottom of page
-
-## Installion & Setup
+- Created shareable links for each image
+## installation & Setup
 * Copy `example.env` and create `.env.local` at the root of the folder and add required environment info. 
 
 To run the app, run this commands in from the root:
